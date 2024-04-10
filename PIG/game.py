@@ -35,7 +35,7 @@ def starting_score(num):
 
 def the_game(scores,max_score,num_players):
     print("Welcome to the game !!")
-    while True:
+    while max(scores) < max_score:
         for player_ind in range(num_players):
             print(f"\n It's Player {player_ind + 1}'s turn \n")
             value = 0
@@ -57,7 +57,5 @@ def the_game(scores,max_score,num_players):
             if max(scores) > max_score :
                 print(f"Congratulations 🎉🎊🥳 to Player {scores.index(max(scores))+1} on winning the game!!")
                 break
-        if max(scores) > max_score :
-            break
 
 main()
